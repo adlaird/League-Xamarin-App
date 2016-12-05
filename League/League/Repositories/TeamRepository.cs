@@ -1,5 +1,4 @@
-﻿using System;
-using League.Models;
+﻿using League.Models;
 using SQLite;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +24,6 @@ namespace League.Repositories
         public List<Team> GetAllTeams()
         {
             return conn.Table<Team>().ToList();
-            //comment
         }
 
         private void CreateInitializationData()

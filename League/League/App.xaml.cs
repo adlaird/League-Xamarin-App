@@ -1,7 +1,4 @@
-﻿
-using League.Data;
-using League.Repositories;
-using SQLite;
+﻿using League.Repositories;
 using Xamarin.Forms;
 
 namespace League

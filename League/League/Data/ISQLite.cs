@@ -1,9 +1,9 @@
-﻿using SQLite;
+﻿//using SQLite;
 
-namespace League.Data
-{
-    public interface ISQLite
-    {
-        SQLiteConnection GetConnection();
-    }
-}
+//namespace League.Data
+//{
+//    public interface ISQLite
+//    {
+//        SQLiteConnection GetConnection();
+//    }
+//}
