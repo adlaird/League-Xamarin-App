@@ -1,0 +1,12 @@
+*.suo
+packages/
+League/League.Droid/obj/
+League/League.Windows/obj/
+League/League.Windows/bin/
+League/League.WinPhone/obj/
+League/League.WinPhone/bin/
+League/League/bin/
+League/League/obj/
+League/League.Droid/bin/
+League/League.UWP/obj/
+League/League.iOS/obj/
