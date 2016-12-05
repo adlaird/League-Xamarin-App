@@ -1,22 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using League.ViewModels;
 using Xamarin.Forms;
 
 namespace League
 {
     public partial class StandingsPage : ContentPage
     {
-        public StandingsPage()
+        public StandingsPage(StandingsViewModel vm)
         {
             InitializeComponent();
 
-            var allTeams = App.TeamRepo.GetAllTeams();
+            
 
-            BindingContext = allTeams;
+
+
+            BindingContext = vm;
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using League.Repositories;
+using League.ViewModels;
 using Xamarin.Forms;
 
 namespace League
@@ -13,7 +14,7 @@ namespace League
 
             TeamRepo = new TeamRepository(dbPath);
 
-            MainPage = new StandingsPage();
+            MainPage = new StandingsPage(new StandingsViewModel());
         }
     }
 }
