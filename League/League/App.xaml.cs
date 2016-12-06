@@ -14,7 +14,7 @@ namespace League
 
             TeamRepo = new TeamRepository(dbPath);
 
-            MainPage = new StandingsPage(new StandingsViewModel());
+            MainPage = new NavigationPage(new StandingsPage(new StandingsViewModel()));
         }
     }
 }
