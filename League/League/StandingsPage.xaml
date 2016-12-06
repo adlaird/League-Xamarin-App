@@ -5,7 +5,11 @@
   <StackLayout>
     <Label Text="Standings" VerticalOptions="Center" HorizontalOptions="Center" />
     <ListView ItemsSource="{Binding Standings}">
-    
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <TextCell Text="{Binding Name}" Detail="{Binding Record}" />
+        </DataTemplate>
+      </ListView.ItemTemplate>
     </ListView>
   </StackLayout>
 </ContentPage>

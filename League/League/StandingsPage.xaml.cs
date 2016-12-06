@@ -9,10 +9,6 @@ namespace League
         {
             InitializeComponent();
 
-            
-
-
-
             BindingContext = vm;
         }
     }
