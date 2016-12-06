@@ -38,8 +38,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Data\ISQLite.cs" />
-    <Compile Include="Data\SqlLiteDb.cs" />
     <Compile Include="Models\Game.cs" />
     <Compile Include="Models\Team.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
