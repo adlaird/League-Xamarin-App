@@ -48,6 +48,7 @@
       <DependentUpon>StandingsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\StandingsViewModel.cs" />
+    <Compile Include="ViewModels\TeamViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
