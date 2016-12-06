@@ -21,6 +21,12 @@ namespace League.Repositories
             }
         }
 
+        public void Reset()
+        {
+            conn.DeleteAll<Team>();
+            CreateInitializationData();
+        }
+
         public List<Team> GetAllTeams()
         {
             return conn.Table<Team>().ToList();
@@ -28,8 +34,8 @@ namespace League.Repositories
 
         private void CreateInitializationData()
         {
-            var team1 = new Team() { Id = 1, Name = "Steelers" };
-            var team2 = new Team() { Id = 1, Name = "Ravens" };
+            var team1 = new Team() { Id = 1, Name = "Steelers", Wins = 1, Losses = 0 };
+            var team2 = new Team() { Id = 1, Name = "Ravens", Wins = 0, Losses = 1 };
 
             var teamList = new List<Team> { team1, team2 };
 
