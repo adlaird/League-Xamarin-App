@@ -15,5 +15,10 @@ namespace League
         {
             Navigation.PushAsync(new StandingsPage(new StandingsViewModel()));
         }
+
+        void ResetData(object sender, EventArgs args)
+        {
+            App.TeamRepo.Reset();
+        }
     }
 }

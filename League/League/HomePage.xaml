@@ -5,6 +5,6 @@
   <StackLayout Spacing="20">
     <Label Text="This is the Home Page" VerticalOptions="Center" HorizontalOptions="Center" />
     <Button Text="Standings" HorizontalOptions="Center" BackgroundColor="Green" TextColor="White" Clicked="GoToStandings" />
-    <Button Text="Reset Data" HorizontalOptions="Center"/>
+    <Button Text="Reset Data" HorizontalOptions="Center" Clicked="ResetData"/>
   </StackLayout>
 </ContentPage>
