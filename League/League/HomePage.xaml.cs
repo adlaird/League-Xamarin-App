@@ -1,4 +1,6 @@
-﻿using Xamarin.Forms;
+﻿using League.ViewModels;
+using System;
+using Xamarin.Forms;
 
 namespace League
 {
@@ -7,6 +9,11 @@ namespace League
         public HomePage()
         {
             InitializeComponent();
+        }
+
+        void GoToStandings(object sender, EventArgs args)
+        {
+            Navigation.PushAsync(new StandingsPage(new StandingsViewModel()));
         }
     }
 }

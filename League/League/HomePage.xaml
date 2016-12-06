@@ -4,7 +4,7 @@
              x:Class="League.HomePage">
   <StackLayout Spacing="20">
     <Label Text="This is the Home Page" VerticalOptions="Center" HorizontalOptions="Center" />
-    <Button Text="Standings" HorizontalOptions="Center" BackgroundColor="Green" TextColor="White" />
+    <Button Text="Standings" HorizontalOptions="Center" BackgroundColor="Green" TextColor="White" Clicked="GoToStandings" />
     <Button Text="Reset Data" HorizontalOptions="Center"/>
   </StackLayout>
 </ContentPage>
