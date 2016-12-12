@@ -1,23 +1,22 @@
-﻿using League.Models;
+﻿using League.DTOs;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace League.ViewModels
 {
     public class StandingsViewModel
     {
-        private List<Team> Teams;
+        private List<TeamDTO> Teams;
 
-        public List<TeamViewModel> Standings {
+        public List<TeamDTO> Standings {
             get
             {
-                return Teams.Select(t => new TeamViewModel(t)).ToList();
+                return Teams;
             }
         }
 
         public StandingsViewModel()
         {
-            var allTeams = App.TeamRepo.GetAllTeams();
+            var allTeams = App.TeamService.GetAllTeams();
 
             Teams = allTeams;
         }
