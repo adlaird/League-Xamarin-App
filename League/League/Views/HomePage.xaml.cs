@@ -2,7 +2,7 @@
 using System;
 using Xamarin.Forms;
 
-namespace League
+namespace League.Views
 {
     public partial class HomePage : ContentPage
     {
