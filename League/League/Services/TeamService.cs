@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace League.Services
 {
-    public class TeamService
+    public class TeamService : ITeamService
     {
         public List<TeamDTO> GetAllTeams()
         {

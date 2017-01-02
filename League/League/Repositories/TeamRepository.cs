@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace League.Repositories
 {
-    public class TeamRepository
+    public class TeamRepository : ITeamRepository
     {
         private readonly SQLiteConnection conn;
 

@@ -7,8 +7,8 @@ namespace League
 {
     public partial class App : Application
     {
-        public static TeamRepository TeamRepo { get; private set; }
-        public static TeamService TeamService { get; private set; }
+        public static ITeamRepository TeamRepo { get; private set; }
+        public static ITeamService TeamService { get; private set; }
 
         public App(string dbPath)
         {
