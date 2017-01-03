@@ -9,9 +9,8 @@ namespace League.Repositories
     {
         private readonly SQLiteConnection conn;
 
-        public TeamRepository(string dbPath)
+        public TeamRepository(SQLiteConnection conn)
         {
-            conn = new SQLiteConnection(dbPath);
             conn.CreateTable<Team>();
 
             var allTeams = conn.Table<Team>().ToList();

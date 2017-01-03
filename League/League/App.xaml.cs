@@ -1,6 +1,7 @@
 ﻿using League.Repositories;
 using League.Services;
 using League.Views;
+using SQLite;
 using Xamarin.Forms;
 
 namespace League
@@ -14,7 +15,9 @@ namespace League
         {
             InitializeComponent();
 
-            TeamRepo = new TeamRepository(dbPath);
+            var connection = new SQLiteConnection(dbPath);
+
+            TeamRepo = new TeamRepository(connection);
             TeamService = new TeamService();
 
             MainPage = new NavigationPage(new HomePage());
