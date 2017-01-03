@@ -6,5 +6,6 @@ namespace League.Services
     public interface ITeamService
     {
         List<TeamDTO> GetAllTeams();
+        void Reset();
     }
 }

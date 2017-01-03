@@ -18,7 +18,7 @@ namespace League.Views
 
         void ResetData(object sender, EventArgs args)
         {
-            App.TeamRepo.Reset();
+            App.TeamService.Reset();
         }
     }
 }
