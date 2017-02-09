@@ -17,7 +17,8 @@ namespace League
             var connection = new SQLiteConnection(dbPath);
 
             var teamRepo = new TeamRepository(connection);
-            TeamService = new TeamService(teamRepo);
+            var gameRepo = new GameRepository(connection);
+            TeamService = new TeamService(teamRepo, gameRepo);
 
             MainPage = new NavigationPage(new HomePage());
         }
