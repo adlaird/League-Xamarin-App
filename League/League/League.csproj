@@ -40,6 +40,8 @@
     </Compile>
     <Compile Include="DTOs\TeamDTO.cs" />
     <Compile Include="Extensions\TeamExtensions.cs" />
+    <Compile Include="Repositories\GameRepository.cs" />
+    <Compile Include="Repositories\IGameRepository.cs" />
     <Compile Include="Repositories\ITeamRepository.cs" />
     <Compile Include="Services\ITeamService.cs" />
     <Compile Include="Views\HomePage.xaml.cs">
