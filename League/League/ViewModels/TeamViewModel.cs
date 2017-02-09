@@ -24,7 +24,7 @@ namespace League.ViewModels
         {
             get
             {
-                return _team.Wins + "-" + _team.Losses;
+                return "0-0";
             }
         }
     }

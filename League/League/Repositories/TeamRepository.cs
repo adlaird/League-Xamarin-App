@@ -33,8 +33,8 @@ namespace League.Repositories
 
         private void CreateInitializationData()
         {
-            var team1 = new Team() { Id = 1, Name = "Steelers", Wins = 1, Losses = 0 };
-            var team2 = new Team() { Id = 1, Name = "Ravens", Wins = 0, Losses = 1 };
+            var team1 = new Team() { Id = 0, Name = "Steelers" };
+            var team2 = new Team() { Id = 1, Name = "Ravens" };
 
             var teamList = new List<Team> { team1, team2 };
 

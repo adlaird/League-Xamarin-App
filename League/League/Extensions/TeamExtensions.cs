@@ -10,7 +10,6 @@ namespace League.Extensions
             TeamDTO teamDTO = new TeamDTO();
 
             teamDTO.Name = team.Name;
-            teamDTO.Record = team.Wins + "-" + team.Losses;
 
             return teamDTO;
         }
