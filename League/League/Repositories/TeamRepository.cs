@@ -7,13 +7,15 @@ namespace League.Repositories
 {
     public class TeamRepository : ITeamRepository
     {
-        private readonly SQLiteConnection conn;
+        private readonly SQLiteConnection Connection;
 
         public TeamRepository(SQLiteConnection conn)
         {
-            conn.CreateTable<Team>();
+            Connection = conn;
 
-            var allTeams = conn.Table<Team>().ToList();
+            Connection.CreateTable<Team>();
+
+            var allTeams = Connection.Table<Team>().ToList();
             if (allTeams.Count == 0)
             {
                 CreateInitializationData();
@@ -22,13 +24,13 @@ namespace League.Repositories
 
         public void Reset()
         {
-            conn.DeleteAll<Team>();
+            Connection.DeleteAll<Team>();
             CreateInitializationData();
         }
 
         public List<Team> GetAllTeams()
         {
-            return conn.Table<Team>().ToList();
+            return Connection.Table<Team>().ToList();
         }
 
         private void CreateInitializationData()
@@ -38,7 +40,7 @@ namespace League.Repositories
 
             var teamList = new List<Team> { team1, team2 };
 
-            conn.InsertAll(teamList);
+            Connection.InsertAll(teamList);
         }
     }
 }
