@@ -9,6 +9,7 @@ namespace League.Extensions
         {
             TeamDTO teamDTO = new TeamDTO();
 
+            teamDTO.Id = team.Id;
             teamDTO.Name = team.Name;
 
             return teamDTO;
