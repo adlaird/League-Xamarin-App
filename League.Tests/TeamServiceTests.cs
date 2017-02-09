@@ -56,6 +56,7 @@ namespace League.Tests
             teamService.Reset();
 
             mockTeamRepo.Verify(m => m.Reset(), Times.Once());
+            mockGameRepo.Verify(m => m.Reset(), Times.Once());
         }
     }
 }

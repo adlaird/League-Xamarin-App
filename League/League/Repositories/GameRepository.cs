@@ -8,13 +8,15 @@ namespace League.Repositories
 {
     public class GameRepository : IGameRepository
     {
-        private readonly SQLiteConnection conn;
+        private readonly SQLiteConnection Connection;
 
         public GameRepository(SQLiteConnection conn)
         {
-            conn.CreateTable<Game>();
+            Connection = conn;
 
-            var allGames = conn.Table<Game>().ToList();
+            Connection.CreateTable<Game>();
+
+            var allGames = Connection.Table<Game>().ToList();
             if (allGames.Count == 0)
             {
                 CreateInitializationData();
@@ -23,21 +25,22 @@ namespace League.Repositories
 
         public List<Game> GetGamesByTeamId(int teamId)
         {
-            return conn.Table<Game>().Where(g => g.AwayTeam == teamId || g.HomeTeam == teamId).ToList();
+            return Connection.Table<Game>().Where(g => g.AwayTeam == teamId || g.HomeTeam == teamId).ToList();
         }
 
         public void Reset()
         {
-            throw new NotImplementedException();
+            Connection.DeleteAll<Game>();
+            CreateInitializationData();
         }
 
         private void CreateInitializationData()
         {
-            var game1 = new Game { Id = 0, HomeTeam = 0, AwayTeam = 1, HomeScore = 21, AwayScore = 7, Completed = true, Week = 1};
+            var game1 = new Game { Id = 0, HomeTeam = 17, AwayTeam = 18, HomeScore = 21, AwayScore = 7, Completed = true, Week = 1};
 
             var gameList = new List<Game> { game1 };
 
-            conn.InsertAll(gameList);
+            Connection.InsertAll(gameList);
         }
     }
 }

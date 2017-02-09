@@ -44,6 +44,7 @@ namespace League.Services
         public void Reset()
         {
             TeamRepo.Reset();
+            GameRepo.Reset();
         }
     }
 }
