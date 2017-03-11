@@ -1,6 +1,5 @@
 ﻿using League.Models;
 using SQLite;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -8,9 +7,12 @@ namespace League.Repositories
 {
     public class GameRepository : IGameRepository
     {
-        private readonly SQLiteConnection Connection;
+        private SQLiteConnection Connection;
 
         public GameRepository(SQLiteConnection conn)
+        { }
+
+        public void Initialize(SQLiteConnection conn)
         {
             Connection = conn;
 

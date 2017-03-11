@@ -12,3 +12,4 @@ League/League.UWP/obj/
 League/League.iOS/obj/
 League.Tests/obj/
 League.Tests/bin/
+*.user

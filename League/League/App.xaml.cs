@@ -16,8 +16,12 @@ namespace League
 
             var connection = new SQLiteConnection(dbPath);
 
-            var teamRepo = new TeamRepository(connection);
-            var gameRepo = new GameRepository(connection);
+            var teamRepo = DependencyService.Get<ITeamRepository>();
+            teamRepo.Initialize(connection);
+
+            var gameRepo = DependencyService.Get<IGameRepository>();
+            gameRepo.Initialize(connection);
+
             TeamService = new TeamService(teamRepo, gameRepo);
 
             MainPage = new NavigationPage(new HomePage());

@@ -1,15 +1,21 @@
 ﻿using League.Models;
+using League.Repositories;
 using SQLite;
 using System.Collections.Generic;
 using System.Linq;
+using Xamarin.Forms;
 
+[assembly: Dependency(typeof(ITeamRepository))]
 namespace League.Repositories
 {
     public class TeamRepository : ITeamRepository
     {
-        private readonly SQLiteConnection Connection;
+        private SQLiteConnection Connection;
 
-        public TeamRepository(SQLiteConnection conn)
+        public TeamRepository()
+        { }
+
+        public void Initialize(SQLiteConnection conn)
         {
             Connection = conn;
 
